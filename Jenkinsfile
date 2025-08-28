@@ -27,3 +27,4 @@ stage("deploy"){
 	echo"deploy the application..."
   }
 }
+  }
