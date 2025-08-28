@@ -25,6 +25,7 @@ stage("test"){
 stage("deploy"){
 	step{
 	echo"deploy the application..."
+ 		}
+	}
   }
 }
-  }
