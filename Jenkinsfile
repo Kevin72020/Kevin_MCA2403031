@@ -2,7 +2,7 @@ CODE_CHANGES = true
 pipeline{
   agent any
   stages{
-    stage("build"){
+    steps("build"){
        when {
          expression {
            BRANCH_NAME == 'development' && CODE_CHANGES == true
@@ -12,7 +12,7 @@ pipeline{
             echo 'building the application...'
         }
     }  
-stage("test"){
+steps("test"){
    when {
          expression {
            BRANCH_NAME == 'development' 
@@ -22,7 +22,7 @@ stage("test"){
             echo 'testing the application...'
         }
     }  
-stage("deploy"){
+steps("deploy"){
 	step{
 	echo"deploy the application..."
  		}
